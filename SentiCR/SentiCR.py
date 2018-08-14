@@ -324,7 +324,7 @@ if __name__ == '__main__':
     REPEAT = args.repeat
 
     print("Cross validation")
-    print("Algrithm: " + ALGO)
+    print("Algorithm: " + ALGO)
     print("Repeat: " + str(REPEAT))
 
     workbook = open_workbook("oracle.xlsx")
