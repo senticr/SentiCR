@@ -8,7 +8,7 @@ from sklearn.metrics import  f1_score
 import  random
 import csv
 import re
-
+import sys
 import nltk
 from xlrd import open_workbook
 from statistics import mean
@@ -32,8 +32,12 @@ from imblearn.over_sampling import SMOTE
 
 
 def replace_all(text, dic):
-    for i, j in dic.iteritems():
-        text = text.replace(i, j)
+    if(sys.version_info[0] < 3):
+        for i, j in dic.iteritems():
+            text = text.replace(i, j)
+    else:
+        for i, j in dic.items():
+            text = text.replace(i, j)
     return text
 
 stemmer =SnowballStemmer("english")
